@@ -1,20 +1,21 @@
 import React, {useState, useEffect} from "react";
 import Station from "./Station";
 import axios from "axios";
-import {styled, TextField} from "@mui/material";
 import StyledTextField from "./components/StyledTextField";
-
-
+import {createClient} from 'hafas-client'
+import {profile} from 'hafas-client/p/db/index'
 const SearchStations: React.FC = () => {
     const [inputValue, setInputValue] = useState<string>("");
     const [stations, setStations] = useState<Station[]>([]);
+    const [departures, setDepartures] = useState<any[]>([]); // State for departures
+    const [selectedStations, setSelectedStations] = useState<Station[]>([]);
+
 
     const fetchStations = async (query: string) => {
         if (query) {
             try {
-                const response = await axios.get(`https://v6.vbb.transport.rest/stations?query=${query}`);
+                const response = await axios.get(`https://v6.db.transport.rest/stations?query=${query}`);
                 const stationsData = response.data;
-
 
                 // Convert the object into an array of stations
                 const stationsArray: Station[] = Object.values(stationsData).map((station: any) => ({
@@ -67,10 +68,10 @@ const SearchStations: React.FC = () => {
 
 
             </div>
-            <ul>
+            <ul style={{ background: 'inherit', color: 'inherit'}}>
                 {stations.map((station) => (
                     <li key={station.id}>
-                        {station.name} (Lat: {station.latitude}, Lon: {station.longitude})
+                        {station.name}
                     </li>
                 ))}
             </ul>
