@@ -2,8 +2,7 @@ import React, {useState, useEffect} from "react";
 import Station from "./Station";
 import axios from "axios";
 import StyledTextField from "./components/StyledTextField";
-import {createClient} from 'hafas-client'
-import {profile} from 'hafas-client/p/db/index'
+
 const SearchStations: React.FC = () => {
     const [inputValue, setInputValue] = useState<string>("");
     const [stations, setStations] = useState<Station[]>([]);

@@ -13,6 +13,7 @@
     "@types/node": "^16.7.13",
     "axios": "^1.7.7",
     "db-stations-autocomplete": "^4.1.0",
+    "lvb": "^1.0.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
