@@ -15,6 +15,7 @@
     "fetch-ponyfill": "^7.1.0",
     "lodash": "^4.17.21",
     "moment-timezone": "^0.5.46",
+    "p-queue": "^8.0.1",
     "qs": "^6.13.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
