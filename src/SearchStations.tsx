@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Station from "./Station";
-import axios from "axios";
+import axios, {AxiosResponse} from "axios";
 import StyledTextField from "./components/StyledTextField";
-
+import SearchOptions from './SearchOptions';
+import {merge} from "lodash";
+import {createGet} from './apis/oebb/helper'
 const SearchStations: React.FC = () => {
     const [inputValue, setInputValue] = useState<string>("");
     const [stations, setStations] = useState<Station[]>([]);
@@ -38,6 +40,42 @@ const SearchStations: React.FC = () => {
                         latitude: station.location.latitude,
                         longitude: station.location.longitude,
                     }));
+                }
+
+                if (stationsArray.length === 0) {
+                    const defaults: SearchOptions = {
+                        results: 10, // option seems to be ignored server-side
+                    }
+                    const createStation = (s: any) => ({
+                        type: 'station',
+                        id: String(s.number),
+                        name: s.name || s.meta, // @todo
+                        meta: Boolean(s.meta), // @todo
+                        location: {
+                            type: 'location',
+                            longitude: s.longitude / Math.pow(10, 6),
+                            latitude: s.latitude / Math.pow(10, 6),
+                        },
+                    });
+                    const isString = (value: any): value is string => typeof value === 'string';
+                    const search = async (query: string, opt: SearchOptions = {}): Promise<Station[]> => {
+                        if (!query || !isString(query)) {
+                            throw new Error('missing or invalid `query` parameter');
+                        }
+                        const options = merge(defaults, opt);
+                        // authenticate
+                        const credentials = await auth();
+                        const get = createGet(credentials);
+                        const response: AxiosResponse<Station[]> = await get('https://shop.oebbtickets.at/api/hafas/v1/stations', {
+                            params: {
+                                name: query || null,
+                            },
+                        });
+                        const stations = response.data.map(createStation);
+                        return options.results ? take(stations, options.results) : stations;
+                    };
+                    const response = search(query);
+
                 }
 
                 // Update cache with the fetched stations

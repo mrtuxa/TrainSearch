@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1db7eadd-2af0-41f7-89d8-bf69917964cd" name="Changes" comment="updated README.md">
+    <list default="true" id="1db7eadd-2af0-41f7-89d8-bf69917964cd" name="Changes" comment="stuff">
+      <change afterPath="$PROJECT_DIR$/src/AuthResponse.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Params.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SearchOptions.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/apis/oebb/helper.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SearchStations.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/SearchStations.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
@@ -16,6 +19,14 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -23,6 +34,13 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="restrictions" />
+      </list>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -91,7 +109,39 @@
       <option name="project" value="LOCAL" />
       <updated>1731992455833</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="updated README.md">
+      <option name="closed" value="true" />
+      <created>1731999768577</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731999768577</updated>
+    </task>
+    <task id="LOCAL-00004" summary="original video and the converted gif">
+      <option name="closed" value="true" />
+      <created>1731999799691</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731999799692</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added yarn clean and Makefile">
+      <option name="closed" value="true" />
+      <created>1732004591507</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732004591507</updated>
+    </task>
+    <task id="LOCAL-00006" summary="stuff">
+      <option name="closed" value="true" />
+      <created>1732005578067</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732005578067</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,6 +153,11 @@
     </ignored-roots>
     <MESSAGE value="things?" />
     <MESSAGE value="updated README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated README.md" />
+    <MESSAGE value="original video and the converted gif" />
+    <MESSAGE value="added cache" />
+    <MESSAGE value="added nix" />
+    <MESSAGE value="added yarn clean and Makefile" />
+    <MESSAGE value="stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="stuff" />
   </component>
 </project>
